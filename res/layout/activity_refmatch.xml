@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/btn_refAway"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="36dp"
+        android:text="@string/away_team" />
+
+    <Button
+        android:id="@+id/btn_refHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="51dp"
+        android:layout_toRightOf="@+id/btn_refAway"
+        android:text="@string/home_team" />
+
+    <Button
+        android:id="@+id/btn_outs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_refHome"
+        android:layout_marginTop="42dp"
+        android:text="@string/str_outs" />
+
+    <TextView
+        android:id="@+id/show_inning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_refHome"
+        android:layout_marginTop="22dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btn_strike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_outs"
+        android:layout_alignBottom="@+id/btn_outs"
+        android:layout_alignParentLeft="true"
+        android:text="Strikes" />
+
+    <Button
+        android:id="@+id/btn_foul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_strike"
+        android:layout_toRightOf="@+id/btn_strike"
+        android:text="Fouls" />
+
+    <Button
+        android:id="@+id/btn_ball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_foul"
+        android:layout_alignBottom="@+id/btn_foul"
+        android:layout_toRightOf="@+id/btn_foul"
+        android:text="Balls" />
+
+    <Button
+        android:id="@+id/btn_safe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_refAway"
+        android:layout_below="@+id/btn_strike"
+        android:layout_marginLeft="20dp"
+        android:text="Batter is Safe" />
+
+    <Button
+        android:id="@+id/btn_undo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="Undo" />
+
+    <Chronometer
+        android:id="@+id/timer_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_outs"
+        android:layout_below="@+id/btn_undo"
+        android:layout_marginTop="16dp"
+        android:text="Chronometer" />
+
+    <Button
+        android:id="@+id/btn_timer_reset"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_timer_start"
+        android:layout_alignBottom="@+id/btn_timer_start"
+        android:layout_alignParentLeft="true"
+        android:text="Reset Timer" />
+
+    <Button
+        android:id="@+id/btn_timer_start"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/timer_game"
+        android:text="Start Timer" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Submit Results" />
+
+</RelativeLayout>
